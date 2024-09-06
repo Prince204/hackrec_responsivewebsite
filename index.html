@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Cottage Development</title>
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            line-height: 1.6;
+            background: linear-gradient(45deg, #83a4d4, #b6fbff);
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        header {
+            background: #00838f;
+            padding: 20px;
+            color: #fff;
+            text-align: center;
+            position: relative;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        header img {
+            width: 50px;
+            height: auto;
+            position: absolute;
+            left: 20px;
+            top: 10px;
+        }
+
+        .hero {
+            background: url('images/hero.jpg') no-repeat center center/cover;
+            height: 500px;
+            color: #fff;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .hero h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+
+        .hero .cta {
+            background: orange;
+            color: #fff;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 10px;
+            box-shadow: 0 5px #d9822f;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .hero .cta:hover {
+            background: #e69500;
+            box-shadow: 0 3px #cc7a00;
+            transform: translateY(-2px);
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            background: #006064;
+            margin: 0;
+            animation: fadeIn 2s ease-in-out;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            margin: 5px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 10px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        nav ul li a:hover {
+            background: orange;
+        }
+
+        section {
+            padding: 40px 20px;
+            background: #fff;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 2s ease-in-out;
+            color: #333;
+        }
+
+        h2 {
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+        }
+
+        .key-features ul, .details ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .key-features ul li, .details ul li {
+            background: url('images/check-icon.png') no-repeat left center;
+            padding-left: 30px;
+            margin: 10px 0;
+        }
+
+        .amenity, .lake-feature, .convention {
+            display: flex;
+            margin: 20px 0;
+            animation: fadeIn 2s ease-in-out;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .amenity img, .lake-feature img, .convention img, .layout-img {
+            width: 100%;
+            max-width: 300px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .amenity div, .lake-feature div, .convention div {
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+            margin-top: 20px;
+        }
+
+        table th, table td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        form label {
+            margin: 10px 0 5px;
+        }
+
+        form input, form textarea {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        form button {
+            padding: 15px;
+            background: orange;
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 5px #d9822f;
+            transition: all 0.3s ease-in-out;
+        }
+
+        form button:hover {
+            background: #e69500;
+            box-shadow: 0 3px #cc7a00;
+            transform: translateY(-2px);
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            header img {
+                width: 40px;
+                top: 5px;
+            }
+
+            .hero h1 {
+                font-size: 2em;
+            }
+
+            .hero p {
+                font-size: 1em;
+            }
+
+            .hero .cta {
+                padding: 10px 20px;
+            }
+
+            section {
+                margin: 10px;
+                padding: 20px;
+            }
+
+            .amenity, .lake-feature, .convention {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header img {
+                width: 30px;
+                top: 5px;
+            }
+
+            .hero h1 {
+                font-size: 1.5em;
+            }
+
+            .hero p {
+                font-size: 0.9em;
+            }
+
+            .hero .cta {
+                padding: 8px 15px;
+            }
+
+            section {
+                margin: 5px;
+                padding: 10px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 5px 0;
+            }
+
+            .amenity img, .lake-feature img, .convention img, .layout-img {
+                max-width: 100%;
+            }
+
+            table th, table td {
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://i.ibb.co/7YmHnYq/IMG-20240906-WA0013.jpg" alt="Logo">
+        <h1>Luxury Cottage Development</h1>
+        <nav>
+            <ul>
+                <li><a href="#executive-summary">Executive Summary</a></li>
+                <li><a href="#project-details">Project Details</a></li>
+                <li><a href="#amenities">Amenities</a></li>
+                <li><a href="#artificial-lake">Artificial Lake</a></li>
+                <li><a href="#convention-center">Convention Center</a></li>
+                <li><a href="#layout-plan">Layout Plan</a></li>
+                <li><a href="#financial-projections">Financial Projections</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h1>Experience Luxury Living by the Lake</h1>
+        <p>Discover the ultimate upscale living in our exclusive cottage community.</p>
+        <a href="#executive-summary" class="cta">Learn More</a>
+    </div>
+
+    <main>
+        <section id="executive-summary">
+            <h2>Executive Summary</h2>
+            <img src="https://i.ibb.co/X5bgYHD/IMG-20240906-WA0022.jpg" alt="Executive Summary" class="layout-img">
+            <p><strong>Objective:</strong> To develop an 11.5-acre luxury cottage community designed to offer an upscale living experience for the upper middle class, featuring 200 premium cottages, a multi-purpose convention center with a 5,000-seat capacity, an artificial lake, and a range of high-end amenities.</p>
+            <p><strong>Total Project Budget:</strong> ₹25 crore (250 million INR)</p>
+            <div class="key-features">
+                <h3>Key Features</h3>
+                <ul>
+                    <li>200 premium cottages (350 sq ft each with 200 sq ft garden area)</li>
+                    <li>Multi-purpose convention center with a 5,000-seat capacity</li>
+                    <li>Artificial lake with boating facilities</li>
+                    <li>Sports complex including cricket, football, basketball, and tennis facilities</li>
+                    <li>Swimming pool</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="project-details">
+            <h2>Project Details</h2>
+            <div class="details">
+                <ul>
+                    <li><strong>Location:</strong> Dholera SIR, Gujarat</li>
+                    <li><strong>Total Area:</strong> 11.5 acres</li>
+                    <li><strong>Cottage Area:</strong> 350 sq ft (each) + 200 sq ft garden</li>
+                    <li><strong>Convention Center:</strong> 5,000-seat capacity</li>
+                    <li><strong>Lake Area:</strong> 2 acres</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="amenities" class="amenity">
+            <h2>Amenities</h2>
+            <img src="https://i.ibb.co/fttywyQ/IMG-20240906-WA0020.jpg" alt="Amenities">
+            <div>
+                <p>Our luxury cottages are designed to offer a blend of elegance and comfort. Enjoy a wide range of amenities including:</p>
+                <ul>
+                    <li>Sports complex with cricket, football, basketball, and tennis courts</li>
+                    <li>Swimming pool</li>
+                    <li>Clubhouse</li>
+                    <li>Children's play area</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="artificial-lake" class="lake-feature">
+            <h2>Artificial Lake</h2>
+            <img src="https://i.ibb.co/swspGpq/IMG-20240906-WA0021.jpg" alt="Artificial Lake">
+            <div>
+                <p>The centerpiece of our community is a stunning artificial lake, offering boating and fishing activities, and surrounded by lush greenery.</p>
+            </div>
+        </section>
+
+        <section id="convention-center" class="convention">
+            <h2>Convention Center</h2>
+            <img src="https://i.ibb.co/j6jkt75/IMG-20240906-WA0023.jpg" alt="Convention Center">
+            <div>
+                <p>The multi-purpose convention center is designed to host a wide range of events, with a seating capacity of up to 5,000 people.</p>
+            </div>
+        </section>
+
+        <section id="layout-plan">
+            <h2>Layout Plan</h2>
+            <img src="https://i.ibb.co/hWz3g1T/IMG-20240906-WA0024.jpg" alt="Layout Plan" class="layout-img">
+            <p>The layout plan includes the positioning of cottages, the convention center, the artificial lake, and all amenities.</p>
+        </section>
+
+        <section id="financial-projections">
+            <h2>Financial Projections</h2>
+            <p>The financial projections are based on a detailed analysis of market trends and expected costs:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Phase</th>
+                        <th>Investment (in crore INR)</th>
+                        <th>Expected ROI (%)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Phase 1</td>
+                        <td>10 crore</td>
+                        <td>15%</td>
+                    </tr>
+                    <tr>
+                        <td>Phase 2</td>
+                        <td>8 crore</td>
+                        <td>18%</td>
+                    </tr>
+                    <tr>
+                        <td>Phase 3</td>
+                        <td>7 crore</td>
+                        <td>20%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Luxury Cottage Development. All rights reserved.</p>
+    </footer>
+</body>
+</html>
